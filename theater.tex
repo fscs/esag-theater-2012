@@ -1,0 +1,1566 @@
+\documentclass{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{play}
+\usepackage{titlesec}
+\usepackage[hyperref]{hyperref}
+\usepackage{xspace}
+
+\titleformat{\section}{\bf}{Szene \thesection:\quad}{0em}{}
+\itemindent 0pt
+
+%
+%	BEGIN: Utilities
+%
+\newcommand{\s}[1]{\speaker #1}
+\newcommand{\regie}{\longdirection}
+\newcommand{\kregie}{\shortdirection}
+\newcommand{\charaktere}[1]{\regie{\textbf{Charaktere:} #1}}
+\newcommand{\setting}[1]{\regie{\textbf{Bühnenbild:} #1}}
+\newcommand{\hauptbeamer}[1]{\regie{\textbf{Hauptbeamer:} #1}}
+\newcommand{\sound}[1]{\regie{\textbf{Sound:} #1}}
+\newcommand{\licht}[1]{\regie{\textbf{Licht:} #1}}
+\newcommand{\requisiten}[1]{\regie{\textbf{Requisiten:} #1}}
+
+\newcommand{\technik}{\xspace\shortdirection}
+%g\newcommand{\technik}[1]{}
+
+%
+%	END: Utilities
+%
+
+%
+%	BEGIN:  Charaktere
+%
+%Simpsons
+\newcommand{\Marge}{Marge\xspace}
+\newcommand{\Homer}{Homer\xspace}
+\newcommand{\Lisa}{Lisa\xspace}
+\newcommand{\Bart}{Bart\xspace}
+\newcommand{\Maggie}{Maggie\xspace}
+
+%Darth Vader
+\newcommand{\Darth}{Darth Vader\xspace}
+\newcommand{\JD}{JD\xspace}
+\newcommand{\Cox}{Cox\xspace}
+\newcommand{\House}{House\xspace}
+\newcommand{\Aerztin}{unbekannte Ärztin\xspace}
+
+%Wetten, dass?
+\newcommand{\Gottschalk}{Gottschalk\xspace}
+\newcommand{\Lagerfeld}{Lagerfeld\xspace}
+\newcommand{\MinionA}{Minion1\xspace}
+\newcommand{\MinionB}{Minion2\xspace}
+\newcommand{\Jobs}{Steve Jobs\xspace}
+
+%Holmes
+\newcommand{\Orakel}{Orakel\xspace}
+\newcommand{\Sheldon}{Sheldon\xspace}
+\newcommand{\Holmes}{Holmes\xspace}
+\newcommand{\Columbo}{Columbo\xspace}
+
+%Physi-Chor
+\newcommand{\Solist}{Solist\xspace}
+\newcommand{\Chor}{Chor\xspace}
+
+%Tool-Time
+\newcommand{\Heidi}{Heidi\xspace}
+\newcommand{\Tim}{Tim\xspace}
+\newcommand{\Al}{Al\xspace}
+\newcommand{\Halter}{Schildhalter\xspace}
+\newcommand{\Publikum}{Publikum\xspace}
+
+%schwarze, kalte Volt
+\newcommand{\Picard}{Picard\xspace}
+\newcommand{\Crusher}{Crusher\xspace}
+
+%Herzblatt
+\newcommand{\ModeratorA}{Moderatorin Herzblatt\xspace}
+\newcommand{\Constanze}{Constanze\xspace}
+\newcommand{\Mathematiker}{Mathematiker\xspace}
+\newcommand{\Informatiker}{Informatiker\xspace}
+\newcommand{\Physiker}{Physiker\xspace}
+
+%QED
+\newcommand{\QEDGuestC}{Susan\xspace}
+\newcommand{\QEDHost}{George\xspace}
+\newcommand{\QEDGuestA}{Info-Typ\xspace}
+\newcommand{\QEDGuestB}{Physik-Typ\xspace}
+
+%GFSF
+\newcommand{\GFSFGermanistin}{Germanistin\xspace}
+\newcommand{\GFSFMedizinerin}{Medizinerin\xspace}
+\newcommand{\GFSFInformatiker}{Informatiker\xspace}
+\newcommand{\GFSFPhysiker}{Physiker\xspace}
+
+%Fachschaft Zukunftsdeutung
+\newcommand{\Anrufer}{Anrufer\xspace}
+
+%Familienduell
+\newcommand{\ModeratorB}{Moderator Familienduell\xspace}
+\newcommand{\Lorenzo}{Lorenzo von Matterhorn\xspace}
+\newcommand{\BWLerB}{Alex\xspace}
+\newcommand{\BWLerC}{Matthias\xspace}
+\newcommand{\BWLerD}{Svenja\xspace}
+\newcommand{\BWLerE}{Gian\xspace}
+\newcommand{\NWlerA}{Janka\xspace}
+\newcommand{\NWlerB}{Daniel\xspace}
+\newcommand{\NWlerC}{Dennis\xspace}
+\newcommand{\NWlerD}{Michael\xspace}
+\newcommand{\NWlerE}{Gesine\xspace}
+
+%
+%	END:  Charaktere
+%
+
+
+\begin{document}
+%
+%	BEGIN: Titelseite
+%
+\title{ESAG-Theater 2011}
+\author{}
+\date{Letzte Änderung: \today}
+\maketitle
+\tableofcontents
+%
+%	END:	Titelseite
+%
+
+%
+%	BEGIN: Zusammenfassung Charaktere
+%
+\newpage
+\textbf{Charaktere}
+\begin{verseplay}[10em]
+\s{\Marge}
+	\kregie{CLARA} \kregie{Szene \ref{sec:SimpsonsTeil1}}\\
+	sitzt auf Sofa.
+\s{\Homer}
+	\kregie{JULKIP} \kregie{Szene \ref{sec:SimpsonsTeil1}}\\
+	schaltet Fernsehprogramm um.
+\s{\Lisa}
+	\kregie{LISA} \kregie{Szene \ref{sec:SimpsonsTeil1}}\\
+	sitzt auf Sofa.
+\s{\Bart}
+	\kregie{ALEX} \kregie{Szene \ref{sec:SimpsonsTeil1}}\\
+	schreibt an Tafel.
+\s{\Maggie}
+	\kregie{KNUT} \kregie{Szene \ref{sec:SimpsonsTeil1}}\\
+	sitzt auf Sofa.
+\s{\Darth}
+	\kregie{JOHN} \kregie{Szenen \ref{sec:DarthVaderTeil1}, \ref{sec:Krankenhaus}}\\
+	atmet und Patient im Krankenhaus.
+\s{\JD}
+	\kregie{PATRICK} \kregie{Szenen \ref{sec:Krankenhaus}}\\
+	behandelt Darth Vader.
+\s{\Cox}
+	\kregie{DENNIS} \kregie{Szenen \ref{sec:Krankenhaus}}\\
+	beschimpft JD.
+\s{\House}
+	\kregie{DANIEL} \kregie{Szenen \ref{sec:Krankenhaus}}\\
+	löst Fall..
+\s{\Aerztin}
+	\kregie{SVENJA} \kregie{Szenen \ref{sec:Krankenhaus}}\\
+	Fehldiagnosen.
+\s{\Gottschalk}
+	\kregie{MALE} \kregie{Szenen \ref{sec:Wettendass}}\\
+	Moderator.
+\s{\Lagerfeld}
+	\kregie{GIAN} \kregie{Szenen \ref{sec:Wettendass}}
+	wettet Eisenbahnwette.
+\s{\MinionA}
+	\kregie{ANJA} \kregie{Szenen \ref{sec:Wettendass}, \ref{sec:Holmes}}
+	 albert rum, schmeißt Klopapier.
+\s{\MinionB}
+	\kregie{LISA} \kregie{Szenen \ref{sec:Wettendass}, \ref{sec:Holmes}}
+	 albert rum, schmeißt Klopapier.
+\s{\Jobs}
+	\kregie{DENNIS} \kregie{Szenen \ref{sec:Wettendass}}
+	tippt auf Tablet.
+\s{\Orakel}
+	\kregie{CHRISTINA} \kregie{Szenen \ref{sec:Holmes}}
+	 vergibt Pillen.
+\s{\Sheldon}
+	\kregie{PATRICK} \kregie{Szenen \ref{sec:Holmes}}
+	stibt.
+\s{\Holmes}
+	\kregie{JENS} \kregie{Szenen \ref{sec:Holmes}}
+	löst Fall unter Drogen.
+\s{\Columbo}
+	\kregie{MICHA SI.} \kregie{Szenen \ref{sec:Holmes}}
+\s{\Solist}
+	\kregie{TOBI} \kregie{Szenen \ref{sec:PhysiChor}}
+	singt.
+\s{\Chor}
+	\kregie{ALLE} \kregie{Szenen \ref{sec:PhysiChor}}
+	singen.
+\s{\Heidi}
+	\kregie{CHRISTINA} \kregie{Szenen \ref{sec:ToolTime}}
+	sieht gut aus.
+\s{\Tim}
+	\kregie{MALE} \kregie{Szenen \ref{sec:ToolTime}}
+	sicheres Auftreten bei Ahnungslosigkeit, Handwerker
+\s{\Al}
+	\kregie{HOLGER} \kregie{Szenen \ref{sec:ToolTime}}
+	Handwerker
+\s{\Halter}
+	\kregie{HARALD} \kregie{Szenen \ref{sec:ToolTime}}
+	lachen, grunzen, applaus
+\s{\Publikum}
+	\kregie{ALLE} \kregie{Szenen \ref{sec:ToolTime}}
+	freiwillige verteilt im Publikum, die Stichwörter kennen
+\s{\Picard}
+	\kregie{DENNIS} \kregie{Szenen \ref{sec:Volt}}
+	liebt Volt
+\s{\Crusher}
+	\kregie{JANKA} \kregie{Szenen \ref{sec:Volt}}
+	kocht Kaffee.
+\s{\ModeratorA}
+	\kregie{CLARA} \kregie{Szenen \ref{sec:Herzblatt}}
+	stellt Kandidaten vor.
+\s{\Constanze}
+	\kregie{SVENJA} \kregie{Szenen \ref{sec:Herzblatt}}
+	sucht Mann.
+\s{\Mathematiker}
+	\kregie{MALE} \kregie{Szenen \ref{sec:Herzblatt}}
+	Mathematiker in Herzblatt
+\s{\Informatiker}
+	\kregie{ALEX} \kregie{Szenen \ref{sec:Herzblatt}}
+	Informatiker in Herzblatt
+\s{\Physiker}
+	\kregie{TOBI} \kregie{Szenen \ref{sec:Herzblatt}}
+	Physiker in Herzblatt
+\s{\QEDGuestC}
+	\kregie{MARIA} \kregie{Szenen \ref{sec:QED}}
+	Mathematikerin in QED.
+\s{\QEDHost}
+	\kregie{PATRICK} \kregie{Szenen \ref{sec:QED}}
+	Moderator von QED.
+\s{\QEDGuestA}
+	\kregie{MALE} \kregie{Szenen \ref{sec:QED}}
+	Informatiker in QED
+\s{\QEDGuestB}
+	\kregie{DENNIS} \kregie{Szenen \ref{sec:QED}}
+	Physiker in QED
+\s{\GFSFGermanistin}
+	\kregie{CHRISTINA} \kregie{Szenen \ref{sec:GFSF}}
+	will feiern.
+\s{\GFSFMedizinerin}
+	\kregie{SVENJA} \kregie{Szenen \ref{sec:GFSF}}
+	muss lernen.
+\s{\GFSFInformatiker}
+	\kregie{ALEX} \kregie{Szenen \ref{sec:GFSF}}
+	zockt
+\s{\GFSFPhysiker}
+	\kregie{DENNIS} \kregie{Szenen \ref{sec:GFSF}}
+	 immer beschäftigt.
+\s{\Anrufer}
+	\kregie{JANKA} \kregie{Szenen \ref{sec:FachschaftZukunftsdeutung}}
+	kontaktiert Zukunftsdeutung wegen Klausur.
+\s{\ModeratorB}
+	\kregie{JENS} \kregie{Szenen \ref{sec:Familienduell}}
+	Werner Schulze-Erdel.
+\s{\Lorenzo}
+	\kregie{PATRICK} \kregie{Szenen \ref{sec:Familienduell}}
+	 Klugscheißer.
+\s{\BWLerB}
+	\kregie{ALEX} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\BWLerC}
+	\kregie{MALE} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\BWLerD}
+	\kregie{SVENJA} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\BWLerE}
+	\kregie{GIAN} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\NWlerA}
+	\kregie{JANKA} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\NWlerB}
+	\kregie{DANIEL} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\NWlerC}
+	\kregie{DENNIS} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\NWlerD}
+	\kregie{MICHA} \kregie {Szenen \ref{sec:Familienduell}}
+\s{\NWlerE}
+	\kregie{GESINE} \kregie {Szenen \ref{sec:Familienduell}}
+\end{verseplay}
+
+%
+%	BEGIN:  Barbra Strisand
+%
+\newpage
+\section{Barbra Strisand}
+\label{sec:BarbraStrisand}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video besteht}
+	\sound{Duck Sauce: Barbra Strisand}
+	\licht{}
+	\requisiten{}
+
+\regie{Lied wird so lange gespielt, bis Erstis sitzen.}
+%	END:  Barbra Strisand
+%
+
+%
+%	BEGIN:  Sicherheitseinweisung
+%
+\newpage
+\section{Sicherheitseinweisung}
+\label{sec:Sicherheitseinweisung}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+\regie{Dennis stellt Sicherheitsvorkehrungen vor}
+%	END:  Sicherheitseinweisung
+%
+
+%
+%	BEGIN: Simpsons Teil1
+%
+\newpage
+\section{Simpsons, Teil1}
+\label{sec:SimpsonsTeil1}
+	\charaktere{\Marge, \Homer, \Lisa, \Bart, \Maggie}
+	\setting{Sofa}
+	\hauptbeamer{Intro-Video}
+	\sound{keiner}
+	\licht{}
+	\requisiten{Sofa, Whiteboard, Knut mit Klamotten, Kreide bzw. Marker, Haare von Marge und Lisa, Fernbedienung, Duff-Bierflasche}
+
+\regie{\Bart schreibt an die Tafel: "`Ich soll keine schlechten Sketche schreiben"'\\ Video mit Gong startet(ohne Bild).\\
+Bart läuft raus, dann startet Video.\\ Video endet.\\Simpsons kommen rein.\\Homer öffnet Bier.}
+\begin{verseplay}
+\s{\Homer}
+Ich guck jetzt ESAG Mystery
+\end{verseplay}
+\regie{Rest rennt schreiend raus,\\ Homer drückt auf Fernbedienung.\\ Holmer wird auf Sofa umgedreht und an den Rand geschoben}
+% 	END: Simpsons, Teil1
+%
+
+%
+%	BEGIN:  Galileo Mystery
+%
+\newpage
+\section{ESAG Mystery}
+\label{sec:GalileoMystery}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video besteht}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Galileo Mystery
+%
+
+
+
+%
+%	BEGIN:  Hub Vorspann
+%
+\newpage
+\section{Hub Vorspann}
+\label{sec:HubVorspann}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video besteht}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Hub Vorspann
+%
+
+%
+%	BEGIN:  Band, Teil1
+%
+\newpage
+\section{Band, Teil1 -- Portal Song}
+\label{sec:BandTeilA}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Band, Teil1
+%
+
+%
+%	BEGIN:  Darth Vader, Teil1
+%
+\newpage
+\section{Darth Vader, Teil1}
+\label{sec:DarthVaderTeil1}
+	\charaktere{\Darth}
+	\setting{leere Bühne}
+	\hauptbeamer{Todesstern Brücke}
+	\sound{Ruhe. Dann: Stimme aus dem Off(Male:): "`Währenddessen auf dem Todesstern"'}
+	\licht{}
+	\requisiten{}
+\regie{Vader steht auf Bühne und atmet.}
+
+%	END: Band, Teil1
+%
+
+%
+%	BEGIN: Klingeltonwerbung
+%
+\newpage
+\section{Klingeltonwerbung}
+\label{sec:klingeltonwerbung}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video besteht}
+	\sound{}
+	\licht{}
+	\requisiten{}
+%
+%	END: Klingeltonwerbung
+%
+
+%
+%	BEGIN: Wetten, dass?
+%
+\newpage
+\section{Wetten, dass?}
+\label{sec:Wettendass}
+	\charaktere{\Gottschalk, \Lagerfeld, \MinionA, \MinionB, \Jobs}
+	\setting{Minions auf Bank, schubsen sich, Jobs mit Tablet auf Sofa, Gottschalk steht und moderiert}
+	\hauptbeamer{später Video}
+	\sound{}
+	\licht{}
+	\requisiten{Minionkostüme, Tablett, Sofa, niedriger Tisch, LGB, Kleidung Gottschalt (Gehrock, Hemd, Lederhose, Perücke), Playmobilmännchen, Gummibärchenschale}
+
+\regie{Video abspielen, sofort pausieren (Wetten, dass...  -Symbol)}
+\begin{verseplay}
+\s{\Gottschalk}
+Freuen wir uns nun auf die Ikone der Mode-Branche, den Mann des guten Geschmacks, eben noch in Paris, extra zu uns nach Düsseldorf gekommen, heißen Sie mit mir willkommen - Carl Lagerfeld!
+\s{\Lagerfeld}
+	\kregie{Tritt ein.}
+\end{verseplay}
+\regie{Musik wird eingespielt}
+\begin{verseplay}
+\s{\Gottschalk}
+Und, was sagst du zu meinem Outfit?
+\s{\Lagerfeld}
+Naja, der Schal passt ja zur Haarfarbe und ansonsten nicht schlecht, dafür, dass du dich im Dunkeln angezogen hast. 
+\s{\Gottschalk}
+MeiLibba! Naja, aber ich kann den Frauen die noch kommen ja nicht den Rang ablaufen.
+	\kregie{Setzt sich.}
+\s{\Lagerfeld}
+	\kregie{begrüßt Minions und \Jobs und setzt sich.}
+\s{\Gottschalk}
+Kommen wir zur Wette. Hans-Jürgen Müller-Lüdenscheid aus Rügen wettet, dass er einen Eisenbahn-Wagon innerhalb von 45 Sekunden mit reiner Muskelkraft einen Meter weit ziehen kann. Das kann man sich so vorstellen:
+	\kregie{demonstriert Wette an LGB}
+\s{\Jobs}
+iZen-Bahn -- Warum gibt es da keine App?
+	\kregie{tippt weiter rum}
+\s{\Lagerfeld}
+Dann will ich den Mann aber erstmal sehen, bevor ich da jetzt irgendwas tippe.
+\s{\Gottschalk}
+Also schalten wir live nach Rügen zu George mit unserem Wettkandidaten.
+\end{verseplay}
+\regie{Video einblenden. Wenn Wetten, dass -Symbol erscheint, Video pausieren.}
+\begin{verseplay}
+\s{\Gottschalk}
+Was glaubst du? Schafft ers?
+\s{\Lagerfeld}
+Wer mit solchen Klamotten rumläuft kann nichts anderes als Züge ziehen, der packt das.
+\s{\Gottschalk}
+Wenn du die Wette verlierst, hab ich mir gedacht, wir tauschen Jackets. Dann hab ich auch mal was Vernünftiges an.
+\s{\Lagerfeld}
+Das ist aber schon eine heftige Strafe, aber Hans-Jürgen wirds schon packen.
+\s{\Gottschalk}
+	\kregie{Zum Video.}
+Dann zurück zu George.
+\end{verseplay}
+\regie{Video weiter abspielen. \Gottschalk kommentiert. Fordert Publikum zum Klatschen auf.}
+\begin{verseplay}
+\s{\Gottschalk}
+Ah, das war knapp. Wenige Zentimeter haben gefehlt. Schade, schade, meiLibba. In den Proben hat es immer geklappt.
+\s{\Lagerfeld}
+Ja in den Lumpen konnte das ja auch nichts werden.
+\s{\Gottschalk}
+	\kregie{zieht Jacket aus, gibt es lagerfeld}
+Dann mal her mit dem edlen Teil.
+	\kregie{tauschen Jackets}
+Und jetzt sehen Sie den lang erwarteten, oft unterschätzten Physi-Chor
+\end{verseplay}
+\regie{Ende.}
+%	END: Wetten, dass?
+%
+
+%
+%	BEGIN:  Physi-Chor
+%
+\newpage
+\section{Physi-Chor}
+\label{sec:PhysiChor}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+\regie{Chor mit Tobi}
+
+%	END: Physi-Chor
+%
+
+%
+%	BEGIN:  Morgen-Journal
+%
+\newpage
+\section{Morgen-Journal}
+\label{sec:MorgenJournal}
+	\charaktere{\Solist, \Chor}
+	\setting{}
+	\hauptbeamer{Video besteht}
+	\sound{}
+	\licht{}
+	\requisiten{}
+\regie{}
+
+%	END: Morgen-Journal
+%
+
+%
+%	BEGIN:  Darth Vader im Krankenhaus
+%
+\newpage
+\section{Darth Vader im Krankenhaus}
+\label{sec:Krankenhaus}
+	\charaktere{\Darth, \JD, \Cox, \Aerztin, \House}
+	\setting{leeres Bett, House in einem Bett mit Handy, Stock daneben, \Darth in anderem Bett}
+	\hauptbeamer{später Video einspielen}
+	\sound{}
+	\licht{}
+	\requisiten{2 Tische, 3 Kitel, Klemmbrett, Stock für House, Handy, Tic-Tac-Packung}
+\regie{\House liegt im Nebenbett und schläft. \Darth liegt in anderem Bett\\ \Cox und \JD kommen auf Bühne und unterhalten sich.}
+\begin{verseplay}
+\s{\Cox}
+Wir haben einen neuen Patienten mit schweren Atemproblemen,
+	\kregie{guckt auf sein Klemmbrett}
+Darth Vader
+\s{\JD}
+Was? Darth Vader, der aus Star Wars? Der ist hier? Ich kann es gar nicht glauben. Ich hab immer von ihm geträumt.
+\end{verseplay}
+\regie{Traumsequenz startet, JD zu Publikum gerichtet.}
+\begin{verseplay}
+\s{\Cox}
+	\kregie{Gibt Klemmrett an namenlosen Arzt}
+\s{\Aerztin}
+Es könnte eine akute Rhinopharyngitis sein.
+\s{\Cox}
+	\kregie{pfeifft, um JD aus Traum zu holen}
+\end{verseplay}
+\regie{Traum stoppt.}
+\begin{verseplay}
+\s{\Cox}
+Hey, Flachzange: Wir sind hier nicht bei Wünsch dir was, sondern bei so isses. Wir haben echt sehr sehr sehr sehr sehr weeeenig Zeit für deine dä-ämlichen Träumereien, Daisy.
+\s{\Aerztin}
+	\kregie{wirft ein}
+Pneumothorax
+\s{\Cox}
+Ich fasse es nicht, wie du hier beim Patienten nicht mal fünf Minuten deiner begehrten konzentration opfern kannst.
+\s{\Aerztin}
+Rachitis?
+\s{\Cox}
+Für wen hälst du dich eigentlich?
+\end{verseplay}
+\regie{Handy klingelt, Titelmelodie von House}
+\begin{verseplay}
+\s{\Cox}
+Ich weiß ja, dass du dich immer in deine kleine Puppenwelt zurückziehen musst, aber das hier ist das echte Leben. Vicky, das Leben besteht nicht aus rosa Plüschhäschen und niedlichen Ponys.
+\s{\House}
+	\kregie{Steht auf, redet mit seinem Team am Handy}
+Ja?
+	\kregie{Pause}
+Das kann doch 13 machen.
+	\kregie{Pause, hält Handy weg, dann zu den anderen Ärzten}
+Asthma.
+	\kregie{am Handy}
+Gut, ich komm vorbei
+	\kregie{wirft Tic-Tacs ein und geht ab}
+\s{\Cox}
+	\kregie{zu JD}
+Flachzange, das hätte jeder Anfänger gewusst.
+	\kregie{geht raus, im Rausgehen noch komische Geräusche}
+\end{verseplay}
+\regie{Licht aus.\\Spot auf JD der zu Tagtraum guckt.\\Tagtraum läuft die letzten Sekunden weiter.\\ Ende}
+
+%	END: Darth Vader im Krankenhaus
+%
+
+%
+%	BEGIN:  Werbespot: Mastercard
+%
+\newpage
+\section{Werbespot: Mastercard}
+\label{sec:WerbespotMastercard}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{}
+\regie{}
+
+%	END: Werbespot: Mastercard
+%
+
+%
+%	BEGIN:  Band, Teil2
+%
+\newpage
+\section{Band, Teil2 -- Ich find Uni toll}
+\label{sec:BandTeilB}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Band, Teil2
+%
+
+%
+%	BEGIN:  Holmes
+%
+\newpage
+\section{Holmes}
+\label{sec:Holmes}
+	\charaktere{\MinionA, \MinionB, \Orakel, \Sheldon, \Holmes mit Spritze, \Columbo}
+	\setting{Orakel auf Tisch, Pult o.ä. in Bühnenmitte}
+	\hauptbeamer{}
+	\sound{Jedes mal, wenn das Wort Orakel kommt, sponsored by oracle einblenden.}
+	\licht{}
+	\requisiten{Tisch für Orakel, Klopapier, 2 große Pillen, Zensurbalken, Reissack, Spritze}
+\regie{Male und Dennis tragen imaginäre Tür in Raum, gehen raus.}
+\begin{verseplay}
+\s{\Sheldon}
+	\kregie{3 mal Klopfen auf Whiteboard.}
+Stan Lee?
+	\kregie{3 mal Klopfen}
+Stan Lee?
+	\kregie{3 mal Klopfen}
+Stan Lee?
+\s{\Orakel}
+Tritt ein, Sheldon. 
+\s{\Sheldon}
+	\kregie{tritt durch imaginäre Tür ein.}
+Ist hier nicht die Autogrammstunde von Stan Lee?
+\s{\Orakel}
+Nein, aber ich habe dich bereits erwartet. Und mach dir keine Sorgen um den Sack Reis
+\s{\Sheldon}
+Ist das schon wieder eine mir nicht geläuftige zwischenmenschliche Floskel?
+	\kregie{sieht sich hektisch um und wirft Sack Reis um}
+\s{\Orakel}
+Du bist der Auserwählte. Nimm diese rote Pille, um Weltfrieden zu erreichen oder diese blaue Pille, um zur Autogrammstunde von Stan Lee zu kommen.
+\s{\Sheldon}
+	\kregie{greift hastig zur blauen Pille, schluckt sie, verschluckt sich und stirbt.}
+\s{\MinionA}
+	\kregie{Kommt auf Bühne und wickelt \Sheldon in Klopapier ein.}
+\s{\MinionB}
+	\kregie{Kommt auf Bühne und wickelt \Sheldon in Klopapier ein.}
+\s{\Holmes}
+	\kregie{geht zum Orakel}
+Guten Tag, Miss Orakel, können Sie mir bitte einige Fakten bestätigen?
+\s{\Orakel}
+Nein, aber du bist der Auserwählte. Nimm diese rote Pille, um Antworten auf all deine Fragen zu bekommen oder diese blaue Pille um in einen ewigen Rauschzustand zu geraten.
+\s{\Holmes}
+Ha, das brauche ich beides nicht und außerdem habe ich keine Fragen
+	\kregie{Spritzt sich Morphium.}
+\s{\Orakel}
+	\kregie{Zensiert mit schwarzem Balken}
+\s{\Holmes}
+	\kregie{Sieht Leiche und denkt nach.}
+Mein lieber Columbo, für den Tod dieses Menschen ist indirekt Stan Lee verantwortlich.
+\s{\Columbo}
+	\kregie{Ist während Holmes Worten erschienen}
+Mr Holmes! Wissen Sie, meine Frau ist ein sehr großer Fan von Ihnen! Sie hat all ihre Romane gelesen. Also die, die Dr. Watson geschrieben hat. Wo war ich? Ach ja, meine Frau! Wissen Sie, sie ist eine sehr gute Frau...
+\s{\Holmes}
+Columbo, bitte konzentrieren Sie sich!
+\s{\Columbo}
+Oh ja, bitte verzeihen Sie, ich bin ein wenig schusselig. Jedenfalls, meine Frau...
+\s{\Holmes}
+Columbo!
+\s{\Columbo}
+Ja, verzeihen Sie. Also meine Frau hätte gerne ein Autogramm von Ihnen.
+\end{verseplay}
+\regie{\MinionA und \MinionB verlassen die Bühne}
+\begin{verseplay}
+\s{\Holmes}
+Jaja, später. Also, wie ich bereits erwähnte, liegt die Verantwortung des bemitleidenswerten Schicksals dieses armen Mannes hier in den Händen Stan Lees, wenn auch nur bildlich gesprochen.
+\s{\Columbo}
+Woher wissen Sie, dass er Comic-Fan war?
+\s{\Holmes}
+Das ist doch offentsichtlich. Auf seinem rechten Zeigefinger ist deutlich ein spiegelverkehrtes, gedrehtes X zu sehen, was eindeutig darauf hinweist, dass die hier liegende Person Ausgabe 12 des am 13. September erschienen X-Men-Comics gestern vor dem Schlafengehen gelesen hat.
+\s{\Columbo}
+Woher wissen Sie, dass er es noch vor dem Schlafengehen gelesen hat?
+\s{\Holmes}
+Trivial - der Abdruck ist bereits so verblasst, dass er vor 14 Stunden und 12 Minuten entstanden sein muss.
+\s{\Columbo}
+	\kregie{dreht sich weg, kommt zurück}
+Aber eine Frage hätte ich noch. Was kann Stan Lee mit dem Tod zu tun gehabt haben, wenn dieser sich mehrere Kilometer von hier entfernt aufhält?
+\s{\Holmes}
+Achten Sie doch auf den Auffindungsort des Opfers. Er liegt direkt im Büro des Orakels, das als einziges in der Lage ist, Menschen den Weg zur Autogrammstunde von Stan Lee zu weisen
+\s{\Columbo}
+Und wie hat es das angestellt?
+\s{\Holmes}
+Sehen Sie, es ist Aufgabe des Orakels, Menschen Entscheidungen treffen zu lassen. Dem Opfer ist die Entscheidung, zu Stan Lees Autogrammstunde zu wollen, so einfach gefallen, dass es sich in der Hast, mit der es die Pille zu sich genommen hat, verschluckt hat und daran erstickt ist. 
+\s{\Columbo}
+	\kregie{im Rausgehen}
+Eine Frage hätte ich dann noch. Wie kommt es, dass das Opfer in Toilettenpapier eingewickelt ist?
+\s{\Holmes}
+Solche Taten müssen eindeutig den vor kurzer Zeit entstandenen Wesen zugeschrieben werden, die sich Minions nennen. Versuchen Sie gar nicht erst, Logik darin zu finden.
+\s{\Columbo}
+	\kregie{kratzt sich am Kopf}
+\s{\Holmes}
+Das einzige ungelöste Rätsel an dieser Stelle, ist die Frage, was Sie hier zu suchen haben.
+	\	\kregie{guckt auf die Spritze, fasst an Columbo vorbei, bemerkt, dass dieser nicht echt ist und geht.}
+Irgendwas stimmt hier nicht.
+\s{\Columbo}
+	\kregie{wendet sich zu Holmes}
+Richtig, aber eine Frage hätte ich noch...
+\end{verseplay}
+\regie{Licht aus.}
+%	END: Holmes
+%
+
+%
+%	BEGIN:  Mainzelmännchen
+%
+\newpage
+\section{Werbespot: Mainzelmännchen}
+\label{sec:WerbespotMainzelmannchen}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Werbespot: Mainzelmännchen
+%
+
+%
+%	BEGIN:  Die 50 beliebtesten Buchstaben
+%
+\newpage
+\section{Die 50 beliebtesten Buchstaben}
+\label{sec:beliebtesteBuchstaben}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Die 50 beliebtesten Buchstaben
+%
+
+%
+%	BEGIN:  Tool-Time
+%
+\newpage
+\section{Tool-Time}
+\label{sec:ToolTime}
+	\charaktere{\Heidi, \Al, \Tim,\Halter}
+	\setting{Tisch mit Rechner (ausgestattet) auf Bühne, (Werkzeugwagen daneben).}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{Schilder (Applaus, Lachen, Grunzen), Akkuschrauber, Rechner mit Funken, große Bohrmaschine, Werkzeuggürtel, Computersachen, Tisch, Werkzeugwaten?}
+
+\regie{\Halter steht bereit.\Heidi steht vorn am Publikum}
+\begin{verseplay}
+\s{\Heidi}
+Wie heißt die beste Heimwerkersendung der Welt?
+\s{\Publikum}
+Toooooool Tiiiiiiime!
+\s{\Heidi}
+Richtiiig, die Firma Binford präsentiert Ihnen Tim Taylor, den Heimwerkerking.
+	\kregie{Geht ab.}
+\s{\Halter}
+	\kregie{Applaus}
+\s{\Tim}
+Danke Heidi, 
+	\kregie{zum Publikum}
+wir alle kennen das Problem von mädchenhaften langsamen strasssteinbeschichteten Rechnern.
+\s{\Al}
+Ich find Strasssteinchen gar nicht so schlecht.
+\s{\Tim}
+	\kregie{Schaut Al verwirrt an, ignoriert das aber}
+Darum zeigen wir Ihnen heute, wie man einen Rechner auf volle Leistung bringt. Ich wäre aber nicht der Heimwerkerkönig, wenn ich einfach alles neu kaufen würde. Darum zeigen wir Ihnen, wie man mit vorhandener Hardware den Rechner richtig aufmotzen kann.
+\s{\Al}
+Das ist auch um einiges umweltschonender und spart seltene Erden, die sonst teuer aus China importiert werden müssen.
+\s{\Tim}
+Und das Zauberwort heißt.
+\s{\Tim}
+\s{\Al}
+	\kregie{im Chor}
+Übertakten.
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+Hierfür haben wir das neue Binford 2000 Übertaktungskit.
+	\kregie{Öffnet die Box}
+Das Binford 2000 Set enthält alles um einen Handelsüblichen Rechner auf das 21. Jahrhundert vorzubereiten.
+\s{\Al}
+Tim, das 21. Jahrhundert dauert schon 10 Jahre.
+\s{\Tim}
+Al, um deine Mutter herumzufahren dauert 10 Jahre.
+\s{\Halter}
+	\kregie{Lachen}
+\s{\Al}
+Das glaube ich nicht Tim. 
+	\kregie{zum Publikum}
+Wenn man einen Rechner aufrüstet, muss man darauf achten, dass man auch die richtigen Teile wählt und für ein ausgewogenes Verhältnis von Rechenleistung und Hauptspeicher sorgt.
+\s{\Tim}
+Für eine ordentliche Session Battlefield braucht man halt Speicher und Taktrate en mass
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+Darum enthält das Binford 2000 Übertaktungskit einen Speichervervielfacher.
+\s{\Al}
+Der Speichervervielfacher benutzt quantenmechaische Methoden, um im ursprünglichen Speicher vier Informationen pro Bit zu speichern.
+\s{\Tim}
+	\kregie{Gibt den Speicherriegel an Al, der ihn "`einbaut"'}
+Der Speichervervielfacher vervielfacht nicht nur den Speicher, sondern beschleunigt die Zugriffsrate auf das Doppelte. Nun kommen wir zum Kernstück des Binford 2000 Übertaktungsset, dem Übertakter.
+	\kregie{Holt Übertakter raus}
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+Mit diesem einfachen Übertakter kann man den Rechner schnell auf die doppelte Taktrate bringen.
+	\kregie{Geht mit dem Akkuschrauber zum Rechner und schraubt rum.}
+\s{\Al}
+Wichtig beim Übertaktetn ist, dass man immer für ausreichnede Kühlung sorgt. Daher sollte man nie vergessen, die Kühlsysteme für das System an die neuen Bedienungen anzupassen.
+\s{\Tim}
+Wenn Sie dieses Baby
+	\kregie{Hält den Übertakter hoch}
+für den Chip in ihrem alten Polo nehmen, können sie bei Indianeapolis den ersten Platz gewinnen. 
+\s{\Al}
+Das glaube ich nicht, Tim
+\s{\Tim}
+	\kregie{mit Rumschrauben fertig und schaut auf den Monitor}
+Wie Sie sehen, kann man nun auch anspruchsvollere Spiele spielen.
+\s{\Al}
+Zum Beispiel Sims 3.
+\s{\Tim}
+Oder aber Crysis 2.
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+Ein episches Ballervergnügen erster Sahne. Aber bald kommt ja Max Payne 3 raus und da brauchen wir vor allem eins und das ist:
+\s{\Publikum}
+Mehr Power!!!
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+Und dafür haben wir den Binford 5000 Übertakter.
+\s{\Heidi}
+	\kregie{Kommt mit einer Bohrmaschine rein und gibt sie an Tim.}
+\s{\Halter}
+	\kregie{Applaus}
+\s{\Tim}
+Danke Heidi
+\s{\Heidi}
+	\kregie{knickst und geht wieder ab}
+\s{\Tim}
+Der Binford 5000 Übertakter gibt Ihrem Rechner die 5000-fache Taktrate.
+\s{\Halter}
+	\kregie{Grunzen}
+\s{\Tim}
+	\kregie{Steckt den Stecker in eine bereitliegende Steckdose und fängt an, im Rechner rumzubohren, dabei trägt er Ohrenschützer und Schutzbrille.}
+\s{\Al}
+Natürlich muss man dann den Rechner mit flüssigem Stickstoff kühlen.
+	\kregie{Geht dabei außer Teichweite des Rechners}
+\s{\Tim}
+	\kregie{Wenn er fertig ist}
+So, dann schauen wir mal, was die Kiste nun kann. 
+	\kregie{Schaltet ein und nun wird auch die Rauchmaschine eingeschaltet}
+\s{\Al}
+	\kregie{entsetzt}
+Tim, die Kühlung!
+\s{\Tim}
+Ach, der Lüfter sollte das hinkriegen. Oh, Mist.
+\s{\Halter}
+	\kregie{Applaus}
+\end{verseplay}
+\regie{Ende.}
+
+%	END: Tool-Time
+%
+
+%
+%	BEGIN:  schwarze, kalte Volt
+%
+\newpage
+\section{schwarze, kalte Volt}
+\label{sec:Volt}
+	\charaktere{\Picard, \Crusher}
+	\setting{2 Sessel, flacher Tisch mit Figuren, Volt und Tassen, Personen sitzen.}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{2 Sessel, 2 Voltdosen, 2 Tassen, Schachfiguren}
+\begin{verseplay}
+\s{\Picard}
+	\kregie{nippt an Volt und schwärmt}
+\s{\Crusher}
+	\kregie{gießt Volt in eine Tasse, nippt}
+Mmmmmmh, lecker.
+\s{\Picard}
+Ja, Junge, Alde, das ist Volt, echt jetzt. Schwarz und kalt un lecker. Volt-Cola, Junge. Schwarz und kalt. 
+\s{\Crusher}
+Mmmmhmmmhmhm
+\s{\Picard}
+Kalt und lecker, und vor allem schwarz. Ja, äh, wenn ich ehrlich bin, Alde dann trink ich am liebsten kalte, schwarze Volt. Kalt und schwarz, Junge.
+\s{\Crusher}
+Mmmhmmhm, vor allem, wenn sie schön schwarz und lecker ist, Captain.
+\s{\Picard}
+Ja, äh, das ist wie mit den Figuren hier
+	\kregie{greift nach schwarzer Figur}
+äh, Alde, 
+	\kregie{greift nach weißer Figur}
+nur, dass die nicht schwarz ist.
+\s{\Crusher}
+Mmmhmmhm, aber was hat denn die weiße Figur mit der schwarzen Volt zu tun?
+\s{\Picard}
+Junge, das liegt doch wohl ganz klar auf der Hand, oder? Schöne, schwarze, schöne, kalte Volt, scheiße. Tu am besten mal, was du am besten kannst, Alde. Hol ne Volt ausm Kühlschrank.
+\s{\Crusher}
+Mmmhmhmm
+\end{verseplay}
+\regie{Ende.}
+%	END: schwarze, kalte Volt
+%
+
+%
+%	BEGIN: QED
+%
+\newpage
+\section{QED - der Shopping-Sender}
+\label{sec:QED}
+	\charaktere{\QEDHost, \QEDGuestA, \QEDGuestB \QEDGuestC}
+	\setting{3 Tische auf Seite der Bühne}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{3 Tische, Bierflasche(voll), Steinschleuder, Taschenlampe, 2xLaptop, Stapel Papier, Rechenschieber, DVD-Hüllen, Buch mit Hülle, Kühlpack, Diskette}
+\regie{Gastgeber und erster Gast treten auf.}
+\begin{verseplay}[5em]
+\s{\QEDHost} Herzlich willkommen zur Dauerwerbesendung auf QED. Ich begrüße 
+		Sie zum Tag der Naturwissenschaft, bei dem wir Ihnen Waren der
+		führenden Naturwissenschaften zu unschlagbaren Preisen anbeiten 
+		werden. Sie erreichen uns die ganze Sendun über unter der 
+		Telefonnummer 0211-81-3,1415926535. Natürlich können Sie diese 
+		Nummer auch mit 3 annähern.\\
+		\kregie{zum ersten Gast}\\
+		Fangen wir an bei der genialen Informatik. \QEDGuestA, was hast
+		du uns denn heute Legendäres mitgebracht?
+\s{\QEDGuestA} Ja, \QEDHost. Also,ich habe dir heute etwas mitgebracht, 
+		wovon die meisten Menschen in den Büros dieser Welt schon immer 
+		geträumt haben. Es verbindet nicht einen Computer, nicht zwei, 
+		\dots, nicht fünf, nein, es verbindet alle Computer miteinander, 
+		die man sich nur vorstellen kann. Ich habe dir heute ein 
+		100-Meter-W-LAN-Kabel mitgebracht!
+\s{\QEDHost} Oh mein Gott. Das ist soooo neu. Das ist ja unglaublich! Ich 
+		kann mich kaum halten vor Begeisterung. Erzähl uns mehr, \QEDGuestA.
+\s{\QEDGuestA} Ich kann deine Begeisterung verstehen, \QEDHost. Mir ging es 
+		genauso, als ich zum ersten Mal live erleben durfte, wie sich 
+		meine Computer miteinander verbunden haben. Ich führe das einmal 
+		vor.\\
+		\kregie{steckt unsichtbares Kabel in zwei Laptops}\\
+		Siehst du, \QEDHost, wie die Dateien wie von Geisterhand 
+		übertragen werden?
+\s{\QEDHost} Oh ja, \QEDGuestA. Ich sehe es. Leider, liebe Zuschauer, 
+		können Sie dieses phänomenale Ereignis nicht mit erleben, aber es 
+		ist toll!
+\s{\QEDGuestA} Und so schnell! Aber das ist noch nicht alles! Als 
+		Dankeschön für Ihren Einkauf schenken wir Ihnen noch den 
+		aktuellsten universal-Mousepad-Treiber für alle Betriebssysteme, 
+		und - als wäre das nicht schon genug - noch 50 blanko PDF-Dateien 
+		obendrauf!
+\s{\QEDHost} Oh mein Gott, das ist ja unglaublich. Kaum zu fassen, dass es 
+		solche Angebote zu diesem Preis gibt!
+\s{\QEDGuestA} Ja, und für die ganz schnellen Anrufer gibt es sogar 75 
+		Meter Kabel gratis dazu! 
+\s{\QEDHost} Ja, aber \QEDGuestA, jetzt verrate uns auch den Preis.
+\s{\QEDGuestA} Gerne, \QEDHost. Dieses Angebot kann schon für unglaublich 
+		günstige $150$ Euro bestellen. Laut Wikipedia ist das weniger als 
+		ein Euro pro Meter!
+\s{\QEDHost} Das ist ja kaum zu glauben! Liebe Zuschauer, was für eine 
+		nützliche Erfindung. Bestellen Sie jetzt diesen Artikel unter der 
+		Nummer 0211-81-3,1415926535 mit dem Stichwort geek.
+		Vielen Dank, \QEDGuestA.\\
+		\kregie{\QEDGuestA tritt ab, \QEDGuestB tritt auf}\\
+		Kommen wir nun zur grandiosen Physik. Hallo \QEDGuestB. Was hast 
+		du uns heute denn Unglaubliches mitgebracht?
+\s{\QEDGuestB} Hallo \QEDHost. Ich präsentiere dir heute einen 
+		ultra-kompakten Teilchenbeschleuniger: die Teilchenschleuder 
+		XI-1300-A.
+\s{\QEDHost} Wow, was für eine tolle Sache!
+\s{\QEDGuestB} Ja, ich demonstriere direkt einmal ihre  Wirkung. Du nimmst 
+		ein beliebiges Teilchen und fügst es in die Öffnung der 
+		Teilchenschleuder K-807-V ein. Dann spannst du es ganz einfach 
+		leicht und zielst es gegen beliebige Ziele.\\
+		\kregie{schleudert Kreide gegen Tafel}
+\s{\QEDHost} Das ist ja unglaublich! Woe einfach das aussieht!
+\s{\QEDGuestB} Es sieht nicht nur einfach aus,es ist einfach!
+\s{\QEDHost} Das ist ja legendär,  aber doch bestimmt nicht alles, was du 
+		uns mitgebracht hast, oder \QEDGuestB?
+\s{\QEDGuestB} Stimmt, \QEDHost, denn wer jetzt sofort anruft, bekommt 
+		diese praktische Kältepumpe gratis dazu! Mit ihr kannst du deine 
+		Teilchen auf bis zu minus zehn Kelvin herunterkühlen!
+\s{\QEDHost} Oh mein Gott! Das ist ja unglaublich! Dann kann man ja selber 
+		Schneebälle herstellen und diese mit der Teilchenschleuder Z-654-J 
+		beschleunigen. Welch ein Spaß für Kinder!
+\s{\QEDGuestB} Und für die ersten $10.000$ Anrufer gibt es auch noch 
+		kostenlos diese limitierte, extrem handliche Photonenkanone dazu. 
+		All diese Angebote kosten nur $13,37$ Euro plusminus 10 Prozent!
+\s{\QEDHost} Oh mein Gott, das ist unglaublich! Vielen Dank für diese 
+		praktischen Gegenstände. Liebe Zuschauer, bestellen Sie jetzt 
+		unter der 0211-81-3,1415926535 mit dem Stichwort Quark!
+		\kregie{\QEDGuestB tritt ab, \QEDGuestC tritt auf}\\
+		Und last but not least stelle ich Ihnen Neuheiten aus der Welt der 
+		Mathematik vor. Hallo \QEDGuestC, was hast du uns denn mitgebracht?
+\s{\QEDGuestC} Hallo \QEDHost, ich habe für unsere Zuschauer eine massive 
+		Erleichterung des mathematischen Alltags mitgebracht: nicht eine,
+		nicht zwei, nein tausend unentdeckte Primzahlen. Diese Primzahlen 
+		werden von führenden Mathematikern schon lange Zeit gesucht und 
+		nun haben sie zu Hause, liebe Zuschauer, die Möglichkeit, dieser 
+		Suche ein Ende zu bereiten, und das für nur $0,1995\cdot10^2$ Euro. 
+\s{\QEDHost} Wahnsinn! Haben Sie das gehört, liebe Zuschauer! Schlagen sie 
+		jetzt zu und greifen Sie sofort zum Hörer.
+\s{\QEDGuestC} Aber das ist noch nicht alles. Damit Sie auch neben den 1000 
+		unentdeckten primzahlen viel Freude haben, schenken wir ihnen 
+		gratis noch den durch mehrere Preise geehrten Film "`one night im 
+		hilbertraum"' als Doppel-DVD mit dem "`Schweigen der Lemmata"' und 
+		den legendären Stummfilm "`Die letzte Stelle von Pi"' dazu. 
+\s{\QEDHost} Oh mein gott, das ist ja unglaublich!
+\s{\QEDGuestC} Ja, \QEDHost. Dieser tolle Stummfilm wird von Pianomusik des 
+		berühmten Pianisten G. Auß untermalt. Und jetzt kommts: Für die 
+		ersten 100 Anrufer gibt es noch einen Rechenschieber, mit dem es 
+		möglich ist durch null zu teilen.
+\s{\QEDHost} Das ist so unglaublich. \QEDGuestC, ich glaube da kann keiner 
+		der Zuschauer widerstehen. Vielen dank für diese tolle 
+		Präsentation. Bestellen sie jetzt unter der Nummer 
+		0211-81-3,1415926535 mit dem Stichwort Pi-Pi.
+		\kregie{kurze Pause}
+		Ich bin überwältigt von all diesen Produkten und bin mir sicher, 
+		dass Sie genauso empfinden. Auf Wiedersehen!
+\end{verseplay}
+%
+%	END: QED
+%
+
+%
+%	BEGIN:  Band, Teil3
+%
+\newpage
+\section{Band, Teil3 -- Übungszettel}
+\label{sec:BandTeilC}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Band, Teil3
+%
+
+%
+%	BEGIN:  Herzblatt
+%
+\newpage
+\section{Herzblatt}
+\label{sec:Herzblatt}
+	\charaktere{\ModeratorA, \Constanze, \Mathematiker, \Informatiker, \Physiker}
+	\setting{links: ein Stuhl, Trennwand, 3 weitere Stühle}
+	\hauptbeamer{Video-Intro von Herzblatt}
+	\sound{}
+	\licht{}
+	\requisiten{Decken für Whiteboard, Whiteboard, 4 Stühle, Nerd-Shirt, Thinkpad 14 Zoll, Wal}
+
+\begin{verseplay}
+\s{\ModeratorA}
+Willkommen zum Herzblatt, hier sind unsere heutigen Kandidaten. Kandidat 1, was machen Sie und woher kommen Sie?
+\s{\Physiker}
+Ich beschleunige Teilchen und komme aus Vaku um eine Frau kennen zu lernen.
+\s{\ModeratorA}
+Kandidat 2, wie sieht Ihr Alltag denn aus?
+\s{\Informatiker}
+Ich habe einen ausgebauten Speicher in meinem Keller und treffe mich oft mit internationalen Freunden, um die Welt vor dem Lichtkönig zu retten. 
+\s{\ModeratorA}
+Und Kandidat 3, woher kommen Sie?
+\s{\Mathematiker}
+Ich komme aus dem Vektorraum und versuche, mich zu integrieren. Dazu fehlt mir nur noch eine Konstante in meinem Leben.
+\s{\ModeratorA}
+Ich bitte um die Wand.
+\end{verseplay}
+\regie{Wand wird eingefahren. Micha Si.}
+\begin{verseplay}
+\s{\ModeratorA}
+Dann bitte ich die Dame mit Wahl herein: Constanze.
+\s{\Constanze}
+	\kregie{kommt mit Wal herein und setzt sich. Stellt Wal neben sich.}
+\s{\ModeratorA}
+Was erhoffen Sie sich von diesem Abend?
+\s{\Constanze}
+Da meine Berufsaussichten als Philosophin nicht die besten sind, suche ich einen Mann mit besseren Zukunftschancen. 
+\s{\ModeratorA}
+Bitte, stellen Sie Ihre Fragen.
+\s{\Constanze}
+Kandidat 3, wenn wir einen romantischen Abend zusammen verbringen würden, welchen Film würden wir sehen?
+\s{\Mathematiker}
+Entweder das Schweigen der Lemmata oder den Stummfilm Die letze Stelle von Pi.
+\s{\Constanze}
+Kandidat 1, wir sind immernoch bei unserem romantischen Abend. Auf welchen Nachtisch dürfte ich mich freuen?
+\s{\Physiker}
+Es gäbe Donauwelle -- ein Teilchen mit Wellencharakter.
+\s{\Constanze}
+Kandidat 2, wir haben geheiratet. Wohin entführst du mich zu unserern Flitterwochen?
+\s{\Informatiker}
+Nach Java -- die Sprache kann ich ja schon.
+\s{\Constanze}
+Kandidat 1, angenommen, ich hätte einen dicken Leberfleck im Gesicht -- was würdest du dazu sagen?
+\s{\Physiker}
+Kein Problem, dafür hab ich einen dicken Laser -- das bekommen wir hin.
+\s{\Constanze}
+Kandidat 2, stell dir vor, wir sind einen Abend in der Altstadt. Was würdest du trinken?
+\s{\Informatiker}
+Bitte ein Bit -- über den ganzen Abend auch gerne ein Byte.
+\s{\Constanze}
+Kandidat 3, wenn wir gemeinsam auf einen Kostümball gehen, was würdest du anziehen?
+\s{\Mathematiker}
+Das, was meine Mutter mir rauslegt.
+\s{\Constanze}
+Okay, letzte Frage, Kandidat 2, wie sieht deine Zukunftsplanung aus?
+\s{\Informatiker}
+Ich geh als Software Engineer zu Hewlett Packard ins Data Warehouse Backend.
+\s{\Constanze}
+Was auch immer -- Kandidat 1, was hast du noch so vor?
+\s{\Physiker}
+Also erstmal wollte ich promovieren, dann ein paar Jahre ans MPI nach Rossendorf bei Dresden und...  
+	\kregie{Redet weiter, bis er unterbrochen wird.}
+\s{\Constanze}
+Ja, danke! Kandidat 3, was wirst du mal machen?
+\s{\Mathematiker}
+Ich hab ein Stellenangebot vom Bundesamt für Statistik, das ist sicher und man verdient echt gut.
+\s{\ModeratorA}
+So, du hast noch ein wenig Zeit zu überlegen. Solange wird dir Susi nochmal alles zusammenfassen.
+\end{verseplay}
+\regie{Stimme aus dem Off(Lisa): Also, Constanze, wer soll jetzt dein herzblatt sein? Ist es Kandidat 1, der dir von Dresden aus die Donauwelle mit seinem Laser wegbrennt, oder ist es Kandidat 2, der dich in seinem Keller nach Java entführt oder ist es Kandidat 3, der mit dir in rausgelegten Klamotten beim statistischen Bundesamt die letzte Stelle von Pi sucht? Jetzt musst du dich entscheiden.}
+\begin{verseplay}
+\s{\ModeratorA}
+Okay Constanze, jetzt hast du alle Kandidaten einmal gehört. Auf wen fällt deine Wahl?
+\s{\Constanze}
+Ich nehme Kandidat 3, da scheint mir die finanzielle Zukunft am sichersten.
+\end{verseplay}
+\regie{Physike rund Informatiker gehen ab, Mathematiker und Konstanze stellen sich vor die Wand, Mathematiker guckt die ganze Zeit auf seine Füße, Wand geht weg, erschrockener Gesichtsausdruck bei Constanze. Schreit, zieht Wan wieder vor.\\ Licht aus.}
+\begin{verseplay}
+\s{\Halter}
+	\kregie{Applaus}
+\end{verseplay}
+%	END: Herzblatt
+%
+
+
+%
+%	BEGIN:  Werbung: Jacobs-Mate
+%
+\newpage
+\section{Werbung: Jacobs-Mate3}
+\label{sec:WerbungJacobsMate}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Werbung: Jacobs-Mate
+%
+
+%
+%	BEGIN:  Baum im Herbst
+%
+\newpage
+\section{Baum im Herbst}
+\label{sec:BaumimHerbst}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{Papierblätter, grauer Mittelaltersack}
+\regie{Baum verliert Blätter.}
+
+%	END: Baum im Herbst
+%
+
+%
+%	BEGIN:  GFSF
+%
+\newpage
+\section{GFSF}
+\label{sec:GFSF}
+	\charaktere{\GFSFGermanistin, \GFSFMedizinerin, \GFSFInformatiker, \GFSFPhysiker}
+	\setting{Tisch mit Büchern (Mediziner), Phyisiker daneben mit Übungszetteln und Bier, Informatiker zockt. Germanist auf Sofa.}
+	\hauptbeamer{GFSF Intro}
+	\sound{}
+	\licht{}
+	\requisiten{Tisch, Bücher, Block, Sofa, 3 Stühle, Laptop, Zettel, Stift, }
+\begin{verseplay}
+\s{\GFSFMedizinerin}
+Du, sagmal, kannst du mir das da mal erklären?
+\s{\GFSFPhysiker}
+Für dein Physikum? Lass mal sehen.
+\s{\GFSFMedizinerin}
+Hier, das mit den Widerständen, da soll ich sagen, was da für ein Strom fließt.
+\s{\GFSFPhysiker}
+Ah, das ist ja ganz einfach, da nimmst du diese Maxwellgleichung
+	\kregie{schreibt}
+vereinfachst die auf einen unendlichen Leiter im Vakuum und integrierst das dann auf. Dann kannst du hier und da die Werte einsetzen und schon siehst du, dass dor $6,24\cdot 10^{18}$ Elektronen pro Sekunde rauskommen.
+\s{\GFSFMedizinerin}
+Äh, was?
+\s{\GFSFPhysiker}
+	\kregie{Schaut Mediziner an.}
+Also! Du nimmst einfach das Ohmsche Gesetz, da hast du den Widerstand, da die Spannung und dann teilst du den Widerstand durch die Spannung und zack hast du deinen Strom in Ampere.
+\s{\GFSFMedizinerin}
+So ganz hab ichs noch nicht.
+\s{\GFSFPhysiker}
+	\kregie{Wühlt in dem Kram von Medizinerin}
+Ah, schaumal, wenn da ne $4$ steht, und da ne $2$, dann kommt $2$ raus, wenn da ne $4$ steht und da ne $4$, dann kommt $1$ raus und wenn da ne $5$ steht und da ne $10$ dann kommt einhalb raus.
+\s{\GFSFMedizinerin}
+Ah, sag das doch
+	\kregie{Fängt wieder an auswendig zu lernen}
+\s{\GFSFGermanistin}
+Hey, Leute, was haltet ihr von ner WG-Party am Montag?
+\s{\GFSFMedizinerin}
+Am Montag?
+\s{\GFSFGermanistin}
+Ja, klar, ich hab am Dientag keine Vorlesung.
+\s{\GFSFPhysiker}
+Naja, ich muss am Dienstag Übungszettel abgeben, aber ein Bierchen in Eheren haut schon hin.
+\s{\GFSFMedizinerin}
+Montag wollte ich eigentlich lenrnen, ich hab noch das alles hier auswendig zu lernen.
+\s{\GFSFGermanistin}
+Sag mal, Stephan, wie siehts denn bei dir am Montag aus?
+\s{\GFSFInformatiker}
+Ich kann am Montag nicht, ich hab da Rollenspielgruppe, und ich bin der Meister, kann also nicht Fehlen.
+\s{\GFSFGermanistin}
+Ja, doof. Naja, sonst, wie siehts denn mit Dienstag aus? Ich hab am Mittwoch zwar eine Vorlesung mit Anwesenheitspflicht, aber die Vorlesung ist so voll, der Prof checkt eh nich, wenn ich mich eintragen lasse.
+\s{\GFSFMedizinerin}
+Ich muss fürs Physikum Lernen
+\s{\GFSFPhysiker}
+Naja, ich hab am Mittwoch zwar ne Übungszettelabgabe, aber da kann ich mich draufschreiben lassen.
+\s{\GFSFInformatiker}
+Oh, das ist schlecht, da hab ich nen Raid mit meiner World-of-Warcraft-Gilde. ich bin der einzige Tank, da kann ich nicht fehlen. 
+\s{\GFSFGermanistin}
+Joar, hmmm, das ist natürlich schlecht. Dann könnte man noch Mittwoch nehmen. Donnerstag is eh nur ein Seminar ohne Anwesenheitspflicht und der Dozent hält das	 komplett aus seinem Buch, das hab ich mir ausgeliehen.
+\s{\GFSFMedizinerin}
+Donnerstag hab ich ne Prüfung, da muss ich noch für auswendiglernen.
+\s{\GFSFInformatiker}
+Mittwoch könnt ich, ich muss zwar Donnerstag was fürs Programmierpraktikum abgeben, aber das krieg ich auch betrunken noch hin.
+\s{\GFSFPhysiker}
+Hmmm, Mittwoch ist Stammtisch, da komm ich erst um 1 nach Hause, da bring ich die restlichen Leute noch mit. Donnerstag muss ich eh nur Medizinerklausur betreuen.
+\s{\GFSFMedizinerin}
+Ja, hallo, ich muss die Klausur schreiben, auf keinen Fall gibt es eine Party am Mittwoch. 
+\s{\GFSFGermanistin}
+Och, menno, wir müssen echt mal wieder feiern.
+\s{\GFSFMedizinerin}
+Ja, dann lass doch am Donnerstag feiern, nach der Klausur hab ich bestimmt etwas Zeit. 
+\s{\GFSFPhysiker}
+Donnerstag hab ich Messzeit bekommen, da werd ich die Nacht über in der Uni sein. 
+\s{\GFSFGermanistin}
+Ich geh doch am Donnerstag zum Kulturabend beim spanischen Kulturzentrum, das lass ich mir für mein Ergänzungsfach anrechnen. 
+\s{\GFSFInformatiker}
+Donnerstag ist schlecht, da kommt die neue Version von Minecraft raus, da haben wir uns für ne Lan verabredet. 
+\s{\GFSFInformatiker}
+\s{\GFSFGermanistin}
+\s{\GFSFMedizinerin}
+\s{\GFSFPhysiker}
+	\kregie{zusammen}
+Also Freitag!
+\s{\GFSFMedizinerin}
+Oh, ich seh grad, da wollte ich eigentlich mit Lernen anfangen.
+\end{verseplay}
+\regie{Ende.}
+%	END: GFSF
+%
+
+%
+%	BEGIN:  Übungsgruppe
+%
+\newpage
+\section{Übungsgruppe}
+\label{sec:Uebungsgruppe}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden.}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Übungsgruppe
+%
+
+%
+%	BEGIN:  Band, Teil4
+%
+\newpage
+\section{Band, Teil4 -- Fachschaftsraggea}
+\label{sec:BandTeilD}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Band, Teil4
+%
+
+%
+%	BEGIN:  Fachschaft Zukunftsdeutung
+%
+\newpage
+\section{Fachschaft Zukunftsdeutung}
+\label{sec:FachschaftZukunftsdeutung}
+	\charaktere{\Anrufer}
+	\setting{Tisch mit Telefon}
+	\hauptbeamer{Video vom Orakel}
+	\sound{}
+	\licht{}
+	\requisiten{Telfon oder Handy, Tisch, Stuhl}
+\begin{verseplay}
+\s{\Anrufer}
+Wenn ich doch bloß wüsste, was meine Zukunft bringt. 
+	\kregie{sieht ein Werbeplakat der FS Zukunftsdeutung}
+Aah, da kann ich doch mal anrufen.
+	\kregie{wählt.}
+\end{verseplay}
+\regie{Video beginnt}
+\begin{verseplay}
+\s{\Anrufer}
+	\kregie{Orakel beginnt: Fachschaft Zukunftsdeutung, welche Kunde darf ich Ihnen übermitteln?}
+Ich habe Fragen zu meiner Zukunft?
+	\kregie{Orakel: Verraten Sie mir bitte den Tag Ihrer Geburt?}
+\s{\Anrufer}
+17. März
+	\kregie{Orakel: Ein Steinbock also. Was möchten Sie denn wissen?}
+\s{\Anrufer}
+Ob ich meine Prüfung nächste Woche bestehe. 
+	\kregie{Orakel: Dazu befrage ich mal meine Karten... sie werden bald Ihre Traumfrau finden.}
+\s{\Anrufer}
+Wie, TraumFRAU. Heißt das, ich werde nicht bestehen? Bin ich zu abgelenkt?
+	\kregie{Orakel: Ich werde dazu ... befragen. ... Es wird Regen geben}
+\s{\Anrufer}
+Hören Sie mir zu! Was bedeutet das? Ich will doch nur wissen, ob ich meine Prüfung bestehe!
+	\kregie{Dazu werde ich noch einmal meine Karten befragen. ...  Hüten Sie sich vor Gewittern}
+\s{\Anrufer} 
+Also bekomme ich Ärger mit meinem Prof? Ich verstehe das alles nicht.
+	\kregie{Orakel: Ich sehe Unheil auf Sie zukommen}
+\s{\Anrufer} 
+	\kregie{legt mitten in Satz des Orakels auf.}
+\end{verseplay}
+\regie{Male kommt als Packman rein, nimmt Anrufer mit. Ende.}
+%	END: Fachschaft Zukunftsdeutung
+%
+
+%
+%	BEGIN:  Werbung: Mensacard
+%
+\newpage
+\section{Werbung: Mensacard}
+\label{sec:WerbungMensacard}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{Video vorhanden}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Werbung: Mensacard
+%
+
+%
+%	BEGIN:  Familienduell
+%
+\newpage
+\section{Familienduell}
+\label{sec:Familienduell}
+	\charaktere{\ModeratorB, \NWlerA, \NWlerB, \NWlerC, \NWlerD, \NWlerE, \BWLerB, \BWLerC, \BWLerD, \BWLerE, \Lorenzo}
+	\setting{2 Reihen rechts und links, Tisch in Mitte mit Buzzer}
+	\hauptbeamer{Familienduell mit eingebledeten Lösungen}
+	\sound{}
+	\licht{}
+	\requisiten{3 Tische, (1-2)Buzzer, Karteikarten, 5 Polo-Shirts mit Pullovern}
+\begin{verseplay}
+\s{\ModeratorB}
+Willkommen zurück zu unserem heutigen Familien-Duell-Spezial: Wirtschaftswissenschaftler gegen Naturwissenschaftler, Wir machen weiter mit der alles entscheidenden Runde drei, wo es jetzt um die doppelte Punktzahl geht. Die Naturwissenschaftler führen im Moment mit 380 Punkten zu null
+\end{verseplay}
+\regie{alle BWLer winken erhaben}
+\begin{verseplay}
+\s{\ModeratorB}
+Dann kommt bitte nach vorne, \NWlerA, Lorenzo.
+\s{\Lorenzo}
+	\kregie{wirft ein}
+Von Matterhorn!
+\end{verseplay}
+\regie{\Lorenzo und \NWlerA gehen an die Buzzer}
+\begin{verseplay}
+\s{\ModeratorB}
+Wir haben 100 Leute gefragt... Nennen Sie eine deutsche Landeshauptstadt.
+\s{\Lorenzo}
+bewegt seinen Finger richtung Buzzer
+\s{\NWlerA}
+	\kregie{buzzert schnell}
+Berlin!
+\s{\ModeratorB}
+Sagten auch: 53 Leute, Top-Antwort!
+\s{\Lorenzo}
+	\kregie{erreicht den Buzzer}
+Könnten Sie mal nach dem Buzzer sehen, ich glaube, er funktioniert nicht. 
+\s{\ModeratorB}
+	\kregie{guckt irritiert, geht zu den Naturwissenschaftlern}
+\NWlerB, eine deutsche Landeshauptstadt?
+\s{\NWlerB}
+Düsseldorf
+\s{\ModeratorB}
+Düsseldorf...  Sagten auch? ...  Niemand. \NWlerC
+\s{\NWlerC}
+München
+\s{\ModeratorB}
+München... Sagten auch? 51 Leute. \NWlerD?
+\s{\NWlerD}
+Stuttgart.
+\s{\ModeratorB}
+Stuttgart... Sagten auch...  Auch keiner. 
+	\kregie{zu BWLern}
+Achtung! Gleich für euch die Chance, eventuell einzugreifen
+	\kregie{zu \NWlerE}
+\s{\NWlerE}
+Hamburg.
+\s{\ModeratorB}
+Hamburg...  Sagten auch? 18 Leute. \NWlerA
+\s{\NWlerA}
+Wiesbaden
+\s{\ModeratorB}
+Wiesbaden... Sagten auch...  Drittes Kreuz. 
+	\kregie{zu BWLern}
+Jetzt habt ihr die Chance mit einer richtigen Antwort die bisher erspielten Punkte zu stehlen.
+	\kregie{von hinten die BWLer fragen}
+\s{\BWLerE}
+Frankfurt
+\s{\BWLerD}
+Frankfurt
+\s{\BWLerC}
+Frankfurt
+\s{\BWLerB}
+Frankfurt
+\s{\ModeratorB}
+Lorenzo...
+\s{\Lorenzo}
+...von Matterhorn
+\s{\ModeratorB}
+Als Teamchef darfst du sagen, was du willst.
+\s{\Lorenzo}
+Ich als Manager des Teams schließe mich natürlich dem allgemeinen Tenor meines Teams an. Als Banker war ich auch selbst schon oft in der hessischen Landeshauptstadt. Unsere Antwort lautet selbstverständlich: Frankfurt am Main.
+\s{\ModeratorB}
+Frankfurt am Main... Sagten auch? 5 Leute. Damit haben die Wirtschaftswissenschaftler knapp mit 381 zu 380 Punkten gewonnen. Dann bedanke ich imch hiermit bei den Naturwissenschaftlern und mit wem spiele ich denn jetzt im Finale?
+\s{\Lorenzo}
+Mit meiner Wenigkeit und \BWLerC geht in die schalldichte Kabine.
+\s{\BWLerC}
+	\kregie{geht von der Bühne}
+\s{\ModeratorB}
+	\kregie{zu Lorenzo}
+Dann hast du jetzt 20 Sekundn Zeit. Achtung. 100 Leute haben wir gefragt, ab welchem Schwangerschaftsmonat sieht man einer Frau an, dass sie schwanger ist?
+\s{\Lorenzo}
+September
+\s{\ModeratorB}
+...einen Charakter aus Star Wars
+\s{\Lorenzo}
+Darth Vader
+\s{\ModeratorB}
+...Ein Gesellschaftsspiel mit Würfeln
+\s{\Lorenzo}
+Schach
+\s{\ModeratorB}
+...Etwas, dass man schlägt
+\s{\Lorenzo}
+Golfball
+\s{\ModeratorB}
+eine Sportart, bei der man etwas fängt
+\s{\Lorenzo}
+Ball
+\s{\ModeratorB}
+Gut, dann gucken wir uns deine Antwort einmal an. September, sagten auch...  niemand. Darth Vader, sagten auch...  $24$ Leute. Schach, sagten auch...  niemand. Golfball, sagten auch ...  $4$ Leute. Und Ball, sagten auch...  Keiner. Dann bitte ich \BWLerC zu mir. Du bekommst die selben Fragen gestellt, darfst aber nicht dieselben Antworten geben, sonst 
+	\kregie{MÖP}
+Dafür hast du fünf Sekunden mehr Zeit und auch bei dir läuft die Zeit erst los, nachdem ich die erste Frage gestellt habe. Wir haben 100 Leute gefragt....  ab welchem Schwangerschaftsmonat sieht man einer Frau an, dass sie Schwar ist?
+\s{\BWLerC}
+3. Monat
+\s{\ModeratorB}
+...einen Charakter aus Star Wars
+\s{\BWLerC}
+Darth Vader
+	\kregie{Möp}
+Captain Kirk
+\s{\ModeratorB}
+... Ein Gesellschaftsspiel mit Würfeln
+\s{\BWLerC}
+Mensch ärgere dich nicht. 
+\s{\ModeratorB}
+... Etwas, das man schlägt
+\s{\BWLerC}
+Golfball 
+	\kregie{Möp}
+Kind
+\s{\ModeratorB}
+... eine Sportart, bei der man etwas fängt
+\s{\BWLerC}
+Handball
+\s{\ModeratorB}
+Dann gucken wir uns auch deine Antworten an. Lorenzo...
+\s{\Lorenzo}
+von Matterhorn
+\s{\ModeratorB}
+hat 38 Punkte vorgelegt. 3 Monate, sagten auch... 32 Leute, Top-Antwort. Captain Kirk sagte auch... niemand. Mensch ärgere dich nicht, sagten auch... 29 Leute. Etwas das man schlägt: Kind, sagten auch...  niemand. Handball, sagten auch 10 Leute.
+\s{\Lorenzo}
+	\kregie{holt Luft um zu sprechen}
+Das ist enttäuschend.
+\s{\ModeratorB}
+Vielen Dank, ganz knapp verloren
+\end{verseplay}
+\regie{Licht aus, Video-Einblendung}
+%	END: Familienduell
+%
+
+%
+%	BEGIN:  Band, Teil5
+%
+\newpage
+\section{Band, Teil5 -- Matheschein für jeden}
+\label{sec:BandTeilE}
+	\charaktere{}
+	\setting{}
+	\hauptbeamer{}
+	\sound{}
+	\licht{}
+	\requisiten{}
+
+%	END: Band, Teil5
+
+
+\end{document}
